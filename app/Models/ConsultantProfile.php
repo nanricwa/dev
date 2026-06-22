@@ -16,7 +16,6 @@ class ConsultantProfile extends Model
         'qualifications',
         'languages',
         'meeting_url',
-        'important_document_url',
         'chatwork_account_id',
         'google_refresh_token',
         'google_calendar_email',

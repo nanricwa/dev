@@ -306,7 +306,7 @@
                                                                 ({{ $booking->isGuest() ? $booking->guest_email : $booking->user?->email }})
                                                             </p>
                                                             <p class="text-xs text-gray-400 mb-4">
-                                                                置換タグ: {name}=予約者名, {date}=予約日時, {consultant}=コンサルタント名, {important_document_url}=重要事項説明書URL
+                                                                置換タグ: {name}=予約者名, {date}=予約日時, {consultant}=コンサルタント名
                                                             </p>
                                                             <form method="POST" action="{{ route('consultant.bookings.send-email', $booking) }}">
                                                                 @csrf

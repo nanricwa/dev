@@ -208,12 +208,10 @@ class BookingManageController extends Controller
             . \Carbon\Carbon::parse($booking->start_time)->format('H:i') . ' - '
             . \Carbon\Carbon::parse($booking->end_time)->format('H:i');
 
-        $consultantProfile = auth()->user()->consultantProfile;
         $replacements = [
             '{name}' => $toName,
             '{date}' => $dateLabel,
             '{consultant}' => auth()->user()->name,
-            '{important_document_url}' => $consultantProfile->important_document_url ?? '',
         ];
         $subject = str_replace(array_keys($replacements), array_values($replacements), $validated['subject']);
         $body = str_replace(array_keys($replacements), array_values($replacements), $validated['message']);
